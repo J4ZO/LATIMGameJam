@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     [Header("Input Actions")] 
     [SerializeField] private InputActionReference movementAction;
     [SerializeField] private InputActionReference runAction;
-    [SerializeField] private InputActionReference rotateAction;
     [SerializeField] private InputActionReference attackAction;
 
     private void Awake()
@@ -24,13 +23,20 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        _playerMovement.ChangeSpeed();
+        
+        if(runAction.action.IsPressed()) _playerMovement.SetSpeed();
+        else _playerMovement.ResetSpeed();
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
         Vector2 dir = movementAction.action.ReadValue<Vector2>();
         _playerMovement.Movement(dir);
         
-        Vector2 rot = rotateAction.action.ReadValue<Vector2>();
         Vector2 pos = Mouse.current.position.ReadValue();
         _playerMovement.Rotate(pos);
     }

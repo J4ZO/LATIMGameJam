@@ -1,22 +1,27 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Variables")] 
     [SerializeField] private float moveSpeed;
-    [SerializeField] private float smoothRotation;
-    private float _yaw, _targetYaw, _yawVelocity;
+    [SerializeField] private float runSpeed;
+    [SerializeField] private float smoothSpeed;
+    private float _initialSpeed;
+    private float _targetSpeed;
 
+    
     [Header("References")] 
     private Rigidbody _rb;
+    [SerializeField] private LayerMask groundLayer;
 
     [SerializeField] private Camera cameraRef;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
-        _yaw = _targetYaw = transform.eulerAngles.y;
+        _initialSpeed = moveSpeed;
     }
 
     public void Movement(Vector2 dir)
@@ -25,15 +30,57 @@ public class PlayerMovement : MonoBehaviour
         _rb.MovePosition(_rb.position + direction * (moveSpeed * Time.fixedDeltaTime));
     }
 
-    public void Rotate(Vector2 lookDelta)
+    public void Rotate(Vector2 pointer)
     {
-        Vector3 target = cameraRef.ScreenToWorldPoint(lookDelta);
+        Vector3 mousePos = new Vector3(pointer.x, pointer.y, 0);
         
-        float angle = Mathf.Atan2(target.y - transform.position.y, target.x - transform.position.x);
+        var (success, position) = GetMousePosition(mousePos);
 
-        float angleGrades = (180 / Mathf.PI) * angle - 90;
-        float smooth = Mathf.SmoothDampAngle(_yaw, _targetYaw, ref _yawVelocity, 0.1f);
-        
-        _rb.MoveRotation(Quaternion.Euler(0f, 0f, angleGrades));
+        if (success)
+        {
+            var dir = position - transform.position;
+
+            dir.y = 0f;
+            
+            Quaternion rotation = Quaternion.LookRotation(dir);
+            _rb.MoveRotation(rotation);
+        }
     }
+
+    private (bool success, Vector3 position) GetMousePosition(Vector3 mousePosition)
+    {
+        var ray = cameraRef.ScreenPointToRay(mousePosition);
+
+        if (Physics.Raycast(ray, out var hit, Mathf.Infinity, groundLayer))
+        {
+            Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green);
+            return (success: true, position: hit.point);
+        }
+        
+        return (success: false, position: Vector3.zero);
+        
+    }
+
+    public void SetSpeed(float newSpeed)
+    {
+        _targetSpeed =  newSpeed;
+    }
+    public void SetSpeed()
+    {
+        _targetSpeed =runSpeed;
+    }
+
+    public void ResetSpeed()
+    {
+        _targetSpeed = _initialSpeed;
+    }
+
+    public void ChangeSpeed()
+    {
+        if (Mathf.Approximately(moveSpeed, _targetSpeed)) return;
+        
+        
+        moveSpeed = Mathf.Lerp(moveSpeed, _targetSpeed,  smoothSpeed * Time.deltaTime);
+    }
+    
 }
