@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private static readonly int IsWalking = Animator.StringToHash("IsWalking");
     private static readonly int IsRunning = Animator.StringToHash("IsRunning");
+    private static readonly int Attacked = Animator.StringToHash("Attacked");
 
     [Header("References")]
     private PlayerMovement _playerMovement;
@@ -46,7 +47,9 @@ public class PlayerController : MonoBehaviour
         }
         
         _animator.SetBool(IsWalking, _direction != Vector2.zero);
-     
+
+
+        if (attackAction.action.WasPressedThisFrame()) Attack();
     }
 
     // Update is called once per frame
@@ -57,5 +60,10 @@ public class PlayerController : MonoBehaviour
         
         Vector2 pos = Mouse.current.position.ReadValue();
         _playerMovement.Rotate(pos);
+    }
+
+    private void Attack()
+    {
+        _animator.SetTrigger(Attacked);
     }
 }
