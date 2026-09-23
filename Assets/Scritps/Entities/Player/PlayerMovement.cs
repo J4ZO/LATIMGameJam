@@ -67,20 +67,13 @@ public class PlayerMovement : MonoBehaviour
     }
     public void SetSpeed()
     {
-        _targetSpeed =runSpeed;
+        moveSpeed = runSpeed;
     }
 
     public void ResetSpeed()
     {
-        _targetSpeed = _initialSpeed;
+        moveSpeed = _initialSpeed;
     }
-
-    public void ChangeSpeed()
-    {
-        if (Mathf.Approximately(moveSpeed, _targetSpeed)) return;
-        
-        
-        moveSpeed = Mathf.Lerp(moveSpeed, _targetSpeed,  smoothSpeed * Time.deltaTime);
-    }
+    
     
 }
