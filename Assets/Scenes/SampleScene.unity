@@ -417,6 +417,10 @@ PrefabInstance:
       value: SM_Wep_Cleaver_01
       objectReference: {fileID: 0}
     - target: {fileID: 7965404526009752136, guid: bdc14a9d0413c9b4a9ab11ef884c7cdb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965404526009752136, guid: bdc14a9d0413c9b4a9ab11ef884c7cdb, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
@@ -936,6 +940,10 @@ PrefabInstance:
       value: SM_Wep_Spear_02
       objectReference: {fileID: 0}
     - target: {fileID: 7423503715158509413, guid: 9561eb9a503f4a840aaca20f43cf10a6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423503715158509413, guid: 9561eb9a503f4a840aaca20f43cf10a6, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
@@ -1107,6 +1115,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42905da97f70d4b4e94e959c9897ff61, type: 3}
+--- !u!4 &311371701 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4857105407232568182, guid: fda39ba8f61246149bbade559e6dd7ec, type: 3}
+  m_PrefabInstance: {fileID: 1486292865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,6 +1615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponController
   owner: {fileID: 0}
+  damage: 10
 --- !u!1 &401444012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7028293311919458354, guid: 8350dfe74dbd8b6449235d05f3e5889f, type: 3}
@@ -1658,6 +1672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponController
   owner: {fileID: 0}
+  damage: 10
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,6 +2112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponController
   owner: {fileID: 0}
+  damage: 10
 --- !u!1001 &466396992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2269,6 +2285,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5456511785977030103, guid: d717cd3fff095d34487147b075ac0931, type: 3}
   m_PrefabInstance: {fileID: 497818335}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &505472588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 505472589}
+  m_Layer: 0
+  m_Name: WeaponSlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &505472589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505472588}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: -0, w: 0}
+  m_LocalPosition: {x: 0.092, y: -0.017, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 311371701}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: -90}
 --- !u!1001 &506927183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3621,6 +3668,10 @@ PrefabInstance:
       value: SM_Wep_Dagger_01
       objectReference: {fileID: 0}
     - target: {fileID: 6124936219159294424, guid: 5ca8b764d183e2e46bc60d0e8e7e870e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124936219159294424, guid: 5ca8b764d183e2e46bc60d0e8e7e870e, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
@@ -3982,6 +4033,10 @@ PrefabInstance:
     - target: {fileID: 8559360500435034604, guid: 5dfd8a608a27878478b3ad8b7b18a6c3, type: 3}
       propertyPath: m_Name
       value: SM_Wep_Shovel_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8559360500435034604, guid: 5dfd8a608a27878478b3ad8b7b18a6c3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8559360500435034604, guid: 5dfd8a608a27878478b3ad8b7b18a6c3, type: 3}
       propertyPath: m_TagString
@@ -4398,6 +4453,10 @@ PrefabInstance:
     - target: {fileID: 1148023034579920388, guid: e66094b4d92e8e24897bedc6a50e73a9, type: 3}
       propertyPath: m_Name
       value: SM_Wep_Sword_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148023034579920388, guid: e66094b4d92e8e24897bedc6a50e73a9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1148023034579920388, guid: e66094b4d92e8e24897bedc6a50e73a9, type: 3}
       propertyPath: m_TagString
@@ -4841,6 +4900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponController
   owner: {fileID: 0}
+  damage: 10
 --- !u!1 &1183780700 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8559360500435034604, guid: 5dfd8a608a27878478b3ad8b7b18a6c3, type: 3}
@@ -4897,6 +4957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponController
   owner: {fileID: 0}
+  damage: 10
 --- !u!1001 &1200113259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4978,6 +5039,10 @@ PrefabInstance:
     - target: {fileID: 7028293311919458354, guid: 8350dfe74dbd8b6449235d05f3e5889f, type: 3}
       propertyPath: m_Name
       value: SM_Wep_Axe_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028293311919458354, guid: 8350dfe74dbd8b6449235d05f3e5889f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7028293311919458354, guid: 8350dfe74dbd8b6449235d05f3e5889f, type: 3}
       propertyPath: m_TagString
@@ -5531,6 +5596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponController
   owner: {fileID: 0}
+  damage: 10
 --- !u!1 &1429515328
 GameObject:
   m_ObjectHideFlags: 0
@@ -5723,7 +5789,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 2d9b1fa7329076e4aa697aea834ae974, type: 2}
     - target: {fileID: 925735285564101774, guid: fda39ba8f61246149bbade559e6dd7ec, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are already bound by a Humanoid avatar. These transforms can only be changed by Humanoid clips.\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tFrom animation clip 'A_POLY_GBL_Walk_F_Neut'\n\tFrom animation clip 'A_POLY_GBL_Run_F_Neut'\n\tFrom animation clip 'A_Attack_LightCombo01A_Sword'"
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are already bound by a Humanoid avatar. These transforms can only be changed by Humanoid clips.\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tFrom animation clip 'A_POLY_GBL_Walk_F_Neut'\n\tFrom animation clip 'A_POLY_GBL_Run_F_Neut'\n\tFrom animation clip 'A_Death_L_01_Sword'\n\tFrom animation clip 'A_Attack_LightCombo01A_Sword'"
       objectReference: {fileID: 0}
     - target: {fileID: 5869073421947262030, guid: fda39ba8f61246149bbade559e6dd7ec, type: 3}
       propertyPath: m_Name
@@ -5775,7 +5841,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4857105407232568182, guid: fda39ba8f61246149bbade559e6dd7ec, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 505472589}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5869073421947262030, guid: fda39ba8f61246149bbade559e6dd7ec, type: 3}
       insertIndex: -1
@@ -5785,10 +5854,13 @@ PrefabInstance:
       addedObject: {fileID: 1486292867}
     - targetCorrespondingSourceObject: {fileID: 5869073421947262030, guid: fda39ba8f61246149bbade559e6dd7ec, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1486292872}
+      addedObject: {fileID: 1486292871}
     - targetCorrespondingSourceObject: {fileID: 5869073421947262030, guid: fda39ba8f61246149bbade559e6dd7ec, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1486292871}
+      addedObject: {fileID: 1486292875}
+    - targetCorrespondingSourceObject: {fileID: 5869073421947262030, guid: fda39ba8f61246149bbade559e6dd7ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1486292876}
   m_SourcePrefab: {fileID: 100100000, guid: fda39ba8f61246149bbade559e6dd7ec, type: 3}
 --- !u!1 &1486292866 stripped
 GameObject:
@@ -5857,8 +5929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c4bd12a155cc20479ce1e540053079e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FighterPickUpItem
-  weaponSlot: {fileID: 0}
---- !u!114 &1486292872
+  weaponSlot: {fileID: 505472588}
+--- !u!114 &1486292875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5867,11 +5939,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1486292866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44462a79c1c47774186f2ebc3fc658e3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c5234dc2cc4d5742a8c374dc4e408bc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FighterHealth
-  health: 0
-  maxHealth: 100
+  m_EditorClassIdentifier: Assembly-CSharp::FighterAttack
+  cooldown: 0.5
+  isCooldown: 0
+--- !u!114 &1486292876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486292866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2961e95b60c9a334ca05ac1ff54b99cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FighterStunned
+  stunnedTime: 5
+  isStunned: 0
+  resistance: 0
+  maxResistance: 100
 --- !u!1001 &1496495931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6054,6 +6142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponController
   owner: {fileID: 0}
+  damage: 10
 --- !u!4 &1531721409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6199033127219988308, guid: 39c4b825e84e57444aa2e50d118fad5c, type: 3}
@@ -6666,6 +6755,10 @@ PrefabInstance:
       value: SM_Wep_Club_01
       objectReference: {fileID: 0}
     - target: {fileID: 5849051954947511983, guid: 84fcc7f2d5818954fae494f74d382486, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5849051954947511983, guid: 84fcc7f2d5818954fae494f74d382486, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
@@ -6737,7 +6830,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 2d9b1fa7329076e4aa697aea834ae974, type: 2}
     - target: {fileID: 2010349042953074313, guid: 0a59082416d6783408dfbc27326fe595, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are already bound by a Humanoid avatar. These transforms can only be changed by Humanoid clips.\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tFrom animation clip 'A_POLY_GBL_Walk_F_Neut'\n\tFrom animation clip 'A_POLY_GBL_Run_F_Neut'\n\tFrom animation clip 'A_Attack_LightCombo01A_Sword'"
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are already bound by a Humanoid avatar. These transforms can only be changed by Humanoid clips.\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tFrom animation clip 'A_POLY_GBL_Walk_F_Neut'\n\tFrom animation clip 'A_POLY_GBL_Run_F_Neut'\n\tFrom animation clip 'A_Death_L_01_Sword'\n\tFrom animation clip 'A_Attack_LightCombo01A_Sword'"
       objectReference: {fileID: 0}
     - target: {fileID: 5065931336289498697, guid: 0a59082416d6783408dfbc27326fe595, type: 3}
       propertyPath: m_Name
@@ -6824,10 +6917,13 @@ PrefabInstance:
       addedObject: {fileID: 1721231032}
     - targetCorrespondingSourceObject: {fileID: 5065931336289498697, guid: 0a59082416d6783408dfbc27326fe595, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1721231039}
+      addedObject: {fileID: 1721231038}
     - targetCorrespondingSourceObject: {fileID: 5065931336289498697, guid: 0a59082416d6783408dfbc27326fe595, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1721231038}
+      addedObject: {fileID: 1721231042}
+    - targetCorrespondingSourceObject: {fileID: 5065931336289498697, guid: 0a59082416d6783408dfbc27326fe595, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1721231043}
   m_SourcePrefab: {fileID: 100100000, guid: 0a59082416d6783408dfbc27326fe595, type: 3}
 --- !u!1 &1721231031 stripped
 GameObject:
@@ -6931,7 +7027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FighterPickUpItem
   weaponSlot: {fileID: 772114805}
---- !u!114 &1721231039
+--- !u!114 &1721231042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6940,11 +7036,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1721231031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44462a79c1c47774186f2ebc3fc658e3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c5234dc2cc4d5742a8c374dc4e408bc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FighterHealth
-  health: 0
-  maxHealth: 100
+  m_EditorClassIdentifier: Assembly-CSharp::FighterAttack
+  cooldown: 0
+  isCooldown: 0
+--- !u!114 &1721231043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721231031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2961e95b60c9a334ca05ac1ff54b99cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FighterStunned
+  stunnedTime: 5
+  isStunned: 0
+  resistance: 0
+  maxResistance: 100
 --- !u!1001 &1736723275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7525,6 +7637,10 @@ PrefabInstance:
       value: SM_Wep_Cleaver_02
       objectReference: {fileID: 0}
     - target: {fileID: 1676610491946139869, guid: 995dd93104a28314b90ba6e96373340d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676610491946139869, guid: 995dd93104a28314b90ba6e96373340d, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
@@ -7947,6 +8063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponController
   owner: {fileID: 0}
+  damage: 10
 --- !u!1 &2059938961
 GameObject:
   m_ObjectHideFlags: 0

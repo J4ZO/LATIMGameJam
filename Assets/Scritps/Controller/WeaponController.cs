@@ -1,30 +1,37 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class WeaponController : MonoBehaviour
 {
     [Header("References")] 
     [SerializeField] private GameObject owner;
 
-    [Header("Variables")] [SerializeField] private bool isOccupied;
+    [Header("Variables")] 
+    [SerializeField] private float damage;
+    private bool _isOccupied;
 
     private void OnTriggerEnter(Collider other)
     {
-        if ((other.CompareTag("Player") && other.gameObject != owner) || (other.CompareTag("Enemy") && other.gameObject != owner))
+        if (owner == null || other.gameObject == owner) return;
+        
+        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
         {
             Debug.Log("Damage");
+            var stunned = other.GetComponent<FighterStunned>();
+            stunned.Stunned(damage);
         }
     }
 
     public void SetOwner(GameObject entity)
     {
-        isOccupied = true;
+        _isOccupied = true;
         owner = entity;
         GetComponent<SyntyWaterBobGoblin>().enabled = false;
     }
     
     public bool  IsOccupied()
     {
-        return isOccupied;
+        return _isOccupied;
     }
 }
